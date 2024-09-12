@@ -1,0 +1,25 @@
+{
+  "name": "strip-types-repro",
+  "author": "Damiano Barbati <damiano.barbati@gmail.com> (https://github.com/damianobarbati)",
+  "repository": "https://github.com/damianobarbati/strip-types-repro",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "imports": {
+    "#*": "./src/*",
+    "#helper/*": "./src/helper/*"
+  },
+  "scripts": {
+    "start": "node --no-warnings --experimental-strip-types ./src/index.ts",
+    "test": "vitest run",
+    "lint": "biome check --write",
+    "tsc": "tsc --diagnostics"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5"
+  }
+}
